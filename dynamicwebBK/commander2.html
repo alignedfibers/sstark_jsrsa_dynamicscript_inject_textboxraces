@@ -1,0 +1,64 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+	/*
+		commander(nam){
+			this.appId = jscappReg('commander',nam); //sends app,referer,request to negate at serv
+			if(this.appId != 'hack'){
+			libLoad('slateKit','qammand',jscommand,);
+			}
+			}
+			function
+		}
+	*/
+
+}
+	function process(e, input){ 
+		var characterCode 
+		if(e && e.which){ 
+			e = e
+			characterCode = e.which;
+		}
+		else{
+			e = event
+			characterCode = e.keyCode //character code is contained in IE's keyCode property
+		}
+
+		if(characterCode == 13){ //if generated character code is equal to ascii 13 (if enter key)
+
+			document.getElementById('scriptout').innerHTML = input.value+"</br> moving lines";
+			return true;
+		}
+		
+		if(characterCode == 38){ //character code for uparrow
+		}
+		if(characterCode == 40{ //character code for downarrow
+		}
+		if(characterCode == 37{ //character code for leftarrow, move to beginning
+		}
+		if(characterCode == 39){ //character code for rightarrow, move to end
+		}
+		else{
+		}
+	return true;
+	}
+
+
+
+-->
+</script>
+
+</head>
+<body>
+<div id="main" style="display:block;width:500px; border: solid #000000; margin-left:auto; margin-right:auto">
+	<div id="scriptout">
+	</div>
+	<div id="script-in">
+		<input type="text" onKeyPress="checkKey(event, this);" style="border:none;"/>
+
+
+	</div>
+</div>
+</body>
+</html>

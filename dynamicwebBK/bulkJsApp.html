@@ -1,0 +1,299 @@
+<html>
+<head id="hd">		
+<script>
+function comman(nam){
+	function diagnosticOutput(){
+	//Sends process diagnostic, success and failure amongst other
+	//procedural details to the commanders output window
+	//this feature should be suppressable and is used when
+	//process focus is not within the commander itself as in
+	//when an application is in its second stage load, calling
+	//it's libraries, loading its data and caching a group of
+	//commands if neccasary. This output method is not supposed
+	//to be called prior to cleaning up the loading animation in
+	//the window. The load should be verified complete or not complete.
+	}
+	
+	this.respCmds =  function(scriptInf){
+	
+		if(scriptInf.cmdlist[0] == 'sayname'){
+			window.alert('sayname');
+		}
+		if(scriptInf.cmdlist[1] == 'sayhi'){
+			window.alert('sayhi');
+		}
+		if(scriptInf.cmdlist[3] == 'displayerr'){
+			window.alert(scriptInf.error);
+		}
+		window.alert(scriptInf.nodeId);
+	
+	}
+	
+	this.resumeCmds = function(scriptInf){
+		window.alert('resuming commands');
+		window.alert(scriptInf+'resuming');
+	}
+	
+}
+		
+		
+		
+/********************************************************************
+Now it is time to test the jQuery Remote Ajax functions. 
+
+If this.func is not used that means function or variable is private
+*********************************************************************/
+function transUnit(){
+	var is_busy = false;   //This is a special property
+	/***********************************************************************
+	//To find all current loaded URI's use document.getElementsByClassName()
+	//Then itterate the array that is returned to check if already loaded.
+	//I hope I may be able to cash data that is retrieved then remove the element.
+	//This would only occur with data scripts. The bulk of requests should be in
+	//standard URL format with few action parameters.
+	************************************************************************/
+	var loadedDescribers = new Array(); //An array of all script describers
+	var scriptNodeIds = new Array(); //An array of all loaded script node ids
+	var callback; //The function to be called after load
+	var loaded = false; //Is current request finished loading?
+	var reqUri; //The uri of current request for identification purposes
+	
+	function resetOncePerBasisVars(){
+		is_busy;
+		callback;
+		reqUri;
+		
+	}
+	
+	function loadTimedOut(){
+		window.alert('timed out look 4 false');
+		if(loaded == false){
+		window.alert('loaded equals false in timeout');
+			if(scriptNodeIds.length > 0){
+			window.alert('script nodes are greater than 0');
+				var head = document.getElementById('hd');
+				var unloadScript = document.getElementById(scriptNodeIds[scriptNodeIds.length-1]);
+				window.alert(unloadScript.src);
+				if('dontexist.js' == reqUri){
+				window.alert('src equals reqUri');
+					head.removeChild(unloadScript);
+					is_busy = false;
+				}else{
+					//Nothing was ever loaded in the first place
+					
+				}
+			}
+		}
+	}
+	
+	var loadFinished = function(){
+	window.alert('in load finished function');
+		loaded = true;
+		is_busy = false;
+		addDefinition();
+		var scriptInf = lastLoadedDesc();
+		
+		//Testing needs to be done to find out if a json object encapsulated as private within an
+		//object in global scope can be assigned to a variable encapsulated in global scope. 
+		//I have already Shown all objects in global scope are accessable by private and public members
+		//of a different object within that same scope. However private members are not accessable
+		//outside there encapsulating object. My concern is if there is a reference to origin 
+		//of value when assigned accross bounderies MEANING RETURNED FROM PUBLIC FUNCTION or if
+		//this is specifically PASSED BY VALUE. If this VALUE happens to be an object which in javascript
+		//is fairly consistent with a hash, is it possible that the original model can be removed and
+		//the variable still retain its complete structure and data.
+		
+		scriptInf.nodeId = lastCreatedScriptNodeId();
+		//Set class of scriptNode to jst_closed *Later
+		
+		/*Send loaded to correct handler*/
+		if(scriptInf.type == 'jstcmd'){
+			//Adds commands recieved from server to process list
+			//and starts executing each one by itself in sequence, 
+			//allowing for processing interupt and resume. This
+			//technique allows commands that are dependent on the
+			//load of a remote script or other process independent
+			//of normal flow to finish before resuming execution of
+			//remaining commands via existing events.
+			commander.respCmds(scriptInf);
+		}
+		else if(scriptInf.type == 'json'){
+			//This is the clientside data warehouse, it houses
+			//the local retrieval system and directs requests
+			//for data that is not cached to the server unless 
+			//noserv directive is used, allows apps to share data 
+			//with eachother. But when created the app that shares  
+			//data must be part of the group with which it shares.
+			//Group signature is passed in data request.
+			//dataCache.respData(scriptInf);
+		}
+		else if(scriptInf.type == 'jstapp'){
+			//This is the object that registers incoming applications
+			//as different than any library, cmd or data. The apps are
+			//a very integral part of this system as they provide the 
+			//interface for users and become the final tier. Meaning
+			//others should not be able to call upon it to process for
+			//them. The app delegates its own activities amongst the lower level
+			//objects and within itself. Apps register themselves as multi-instance
+			//verified or single instance apps, all app loads will check this
+			//cache to see if they can be loaded or multi-instance. This transUnit 
+			//is the only access point and must be shared and waited for by all loaders. 
+			//Apps should not use transUnit directly. It is also important to count app
+			//instances under its appInf within appLoad. can be done by a method in app 
+			//load or done by a method given to the appInf data object. I think I will 
+		    //retain my data objects as data only and use a method in appLoad.
+			
+		//appLoad.respApp(scriptInf);
+		}
+		else if(scriptInf.type == 'jstlib'){
+		//libLoad.respLib(scriptInf);
+		}
+		else{
+			//addError info to scriptInf if exists
+		}
+		//The next command in the list should be to remove
+		//loading animation and display loaded details.
+		//this includes checking the success failure list
+		//from the mechanism the load was just passed to.
+		callback(scriptInf);
+		commander.resumeCmds(scriptInf);
+	}
+	
+	var lastCreatedScriptNodeId = function(){
+	//Just returns the id of the last created script
+	//Also usefull for analytics and hacking my own code
+	return scriptNodeIds[scriptNodeIds.length-1];
+	}
+	
+	var lastLoadedDesc = function(){
+	//Just returns the last loaded scriptInf
+	//Usefull for analytics and hacking my own code
+	//will not cooperate with local as public so make 
+	//it local I geuss if needed it get it in callback
+	return loadedDescribers[loadedDescribers.length-1];
+	}
+	
+	
+	/******************************************************************
+	Below you will find what I believe is the only point specifically 
+	designated as an entry point. You may find that within my scripting 
+	techniques that a clear exit point may be hard to find. There is good
+	reason for this and to do what I am trying to do there is only a limited
+	number of ways it can be done. If you look closely the exit points are
+	specific calls to methods of other specifically purposed objects, that
+	can not request the neccasary information from this object directly.
+	It must be given to them, thus the use of multiple private methods and
+	calls to public members of global objects. Adding other objects/response 
+	formats may be difficult in this setup. I believe the objects and 
+	capabilities I provide are enouph to accomplish any task you would like 
+	under this scenerio.
+	*******************************************************************/
+	this.makeCall = function(ru,cb){
+	window.alert('in make call function');
+		if(is_busy != true){
+		window.alert('is_busy must equal false');
+			loaded = false;
+			is_busy = true;
+			reqUri = 'scriptinf.js';
+			callback = cb;
+			window.alert('before geting elements with same class name');
+			//The element tested for below should actually be reqUri
+			window.alert(document.getElementsByClassName('scriptinf.js').length);
+			
+			if(document.getElementsByClassName('scriptinf.js').length == 0){
+				window.alert('after test for elements of same class name');
+				var headID = document.getElementById('hd');         
+				var newScript = document.createElement('script');
+				newScript.type = 'text/javascript';
+				newScript.id = '2010';
+				newScript.className = 'scriptinf.js';
+				newScript.onload=loadFinished; //This is a very important event*******
+				newScript.src = 'scriptinf.js';
+				this.loadLastCreatedScriptId('2010');
+				window.alert(lastCreatedScriptNodeId());
+				//Id gets set, Class gets set = jst_open, reqUrl
+				headID.appendChild(newScript);
+				//removes the just added element and creates a dummy scriptDesc
+				//then sends the error decription to the callback
+				setTimeout(loadTimedOut, 10000); //Also feature rich, sets function to run in T minus
+				
+				
+			}else{
+			window.alert('the requested already has a script element');
+			}
+				
+		}else{
+			//cache request or send a status to the call back
+			//meaning callbacks will be required to handle a # of errors
+		}
+		
+	}
+	
+	this.loadDescription = function(desc){
+	// This method should only be called by incoming scripts
+	// However it is still open to circumvention and may prove
+	// to be a factor in a later security leak.
+	// I can't be certain that this method was successful one
+	// should be sure that what ever method calls it also checks
+	// that there is data and a well formed scriptInf object passed
+	// to it.
+	loadedDescribers.push(desc);
+	}
+	
+	this.loadLastCreatedScriptId = function(id){
+	
+		scriptNodeIds.push(id);
+	
+	}
+	
+	this.isBusy = function(){
+	    //best to just test status prior to making call
+		//then timeout and try again after adding load 
+		//animation and message. Whomever calls this should
+		//be considering a call to the makeCall method of this class
+		return is_busy;
+	}
+}
+
+function libLoad(){
+
+}
+
+function sendCmd(){
+
+}
+
+var asyncBack = function(scriptInf){
+	window.alert(scriptInf+'CALLBACK');
+}
+
+var commander = new comman();
+var transUn = new transUnit();
+function outSide(){
+window.alert("gotOutside");
+//alertMess();
+}
+function start(){
+transUn.makeCall('test',asyncBack);
+}
+</script>
+</head>
+<body>
+
+			<div id="load-div" class="functions">
+				
+				<a href="javascript:start();">GO</a>
+				<a href="javascript:alertMess();">GO Mess</a>
+				<!--<input type="submit" value="alertMess();" id="load_basic" />
+				<input type="submit" value="load() #DOM" id="load_dom" />
+				<input type="submit" value="load() GET" id="load_get" />
+				<input type="submit" value="load() POST" id="load_post" />
+				<input type="Ftrim
+				mit" value="load() callback" id="load_callback" />-->
+			</div>
+
+			<div id="result"  class="functions">
+				
+			</div>
+</body>
+</html>

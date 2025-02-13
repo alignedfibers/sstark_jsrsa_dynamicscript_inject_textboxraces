@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Test Client side file size ~ .: rodboy :.</title>
+		<script type="text/javascript">
+			var binary;
+			var filename;
+			
+			function upload() {
+				var oThumbnail = document.getElementById("imgThumbnail");
+				filename = document.getElementById('myfile').value;
+				oThumbnail.src = "file:///" + escape(filename).replace(/%5C/gi,'/').replace(/%3A/gi,':');
+			
+				try {
+					/*
+						Note from the developer: rodboy
+						If mozilla or netscape based browser then the img fileSize property will not work,
+						therefore using the following will detect the file size.
+					*/
+					
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+					// open the local file
+					var file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+					file.initWithPath( filename );
+					var stream = Components.classes["@mozilla.org/network/file-input-stream;1"].createInstance(Components.interfaces.nsIFileInputStream);
+					stream.init(file,	0x01, 00004, null);
+					var bstream =  Components.classes["@mozilla.org/network/buffered-input-stream;1"].getService();
+					bstream.QueryInterface(Components.interfaces.nsIBufferedInputStream);
+					bstream.init(stream, 1000);
+					bstream.QueryInterface(Components.interfaces.nsIInputStream);
+					binary = Components.classes["@mozilla.org/binaryinputstream;1"].createInstance(Components.interfaces.nsIBinaryInputStream);
+					binary.setInputStream (stream);
+					/*
+						Note from the developer: rodboy
+						Display the file size of the image using the binary method.
+					*/
+					document.getElementById('sizespan').innerHTML = binary.available();
+					
+					binary = null;
+					bstream = null;
+					stream = null;
+					file = null;
+				} catch (e) {
+					/* 
+						Note from the developer: rodboy
+						Either browser is IE, in which case the img onload event will take effect, or
+						we'll not be able to detect the file size using the client side javascript.
+					*/
+				}
+				oThumbnail = null;
+			}
+			
+			function getSize(oImg)
+			{
+				if (oImg.fileSize >-1) {
+					document.getElementById('sizespan').innerHTML = oImg.fileSize;
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+		
+		<form>
+			File: <input id="myfile" name="datafile" type="file" size="40" onchange="upload();" /><br>
+			<input id="getsize" name="getsize" type="button" value="Just in case the size hasn't appeared, click here to get the Image Size" onclick="upload();" />
+		</form>
+		
+		<div id="sizespan"></div>
+		<div id="thumbnail">
+			<img id="imgThumbnail" name="imgThumbnail" src="" alt="place holder" width="50" height="50" onload="getSize(this);"/>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head id="hd">
+
+	<title>Javascript Thread Introduction</title>
+	
+<script type ="text/javascript" src = "loopy.js"></script>
+<script type="text/javascript">
+function createScript(){
+	var myscript = document.createElement("script");
+	myscript.type = "text/javascript";
+	myscript.src = "test.js";
+	document.getElementById("hd").appendChild(myscript);
+}
+
+function appController(){
+
+var runningApps;
+var loadedAppDefs = [];
+var loadedLibDefs;
+
+
+	this.registerApp = function(aID, isMltiInstAble, servOutID){
+	loadedAppDefs[aID] = aID;
+	window.alert(loadedAppDefs[aID]);
+	}
+}
+//myapp = new appController;
+//myapp.registerApp(123,true,987);
+/*
+	this.loadApp = function(aID){
+		/************************************
+		Loads the app if not already loaded
+		*************************************
+		
+		var appId = aID;
+		var canContinue;
+		var appLoaded;
+		
+		if(!isLoaded(appId)){
+		//Do load
+		}
+		else{
+		appLoaded = true;
+	}
+	return appLoaded;
+	}
+
+	this.createApp = function(aID){
+	}
+
+	this.killApp = function(instID){
+		
+	}
+	
+	this.closeAll = function(){
+	}
+	}
+	*/
+	
+</script>
+</head>
+<body onload="createScript()">
+<form id="form1" style="float:left;"> 
+<table>
+<tr>
+<td colspan="2" style="text-align: center">
+<input onclick="Stop();" type="button" value="Stop"/>
+</td>
+</tr>
+<tr>
+<td>
+<textarea cols="50" id="textarea1" rows="20"></textarea>
+</td>
+</tr>
+<tr>
+<td style="text-align: center">
+<input onclick="BigLoop1();" type="button" value="Big loop 1"/>
+<input onclick="ExecsetTimeout1();" type="button" value="setTimeout 1"/>
+<input onclick="ExecsetInterval1();" type="button" value="setInterval 1"/>
+</td>
+</tr>
+</table>
+</form>
+
+
+<form id="form2"> 
+<table>
+<tr>
+<td colspan="2" style="text-align: center">
+<input onclick="Stop();" type="button" value="Stop"/>
+</td>
+</tr>
+<tr>
+<td>
+<textarea cols="50" id="textarea2" rows="20"></textarea>
+</td>
+</tr>
+<tr>
+<td style="text-align: center">
+<input onclick="BigLoop1();" type="button" value="Big loop 1"/>
+<input onclick="ExecsetTimeout1();" type="button" value="setTimeout 1"/>
+<input onclick="ExecsetInterval1();" type="button" value="setInterval 1"/>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

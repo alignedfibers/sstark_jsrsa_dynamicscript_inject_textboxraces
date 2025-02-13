@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head id="hd">
+
+	<title>Javascript Object Introduction</title>
+<script type="text/javascript" src="deflate.js"></script>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+<!--
+//<![CDATA[
+/************************************
+Javascript Object Introduction
+Written by Shawn Stark
+**************************************/
+//Global function
+function testGlobal(){
+ window.alert("global function ran");
+}
+
+/**************************************************
+// A customer object with 2 encapsulated functions 
+// not directly accessable outside functionClass and 
+// must be called as an object method, also Has two 
+// functionClass variable members accessed the same 
+// way as the functions. 
+***************************************************/
+
+function classCustomer(custNam, custNum){
+	
+	//Public Member declarations and assignment
+	var someData = "This is private info";
+	this.memberCustNam = custNam;
+	this.memberCustNum = custNum;
+	
+	//Public function declarations and assignment
+	
+	this.funcWriteName = function writeName(){
+		window.alert(this.memberCustNam);
+		
+	}
+	
+	this.funcWriteNumber = function writeNumber(){
+		window.alert(this.memberCustNum);
+	
+	}
+
+	//Lets try to add some private functions
+	//Yes you can add private functions and objects
+	//But the variables and functions assigned funcClass member names (ie. this.myMember)
+	//are not accessable in local functions and must be passed 
+	//from a funcClass member (ie. this.myMember), funcClass members can access
+	//all locally declared variables. Again all regular
+	//declared variables and functions are accessable
+	//from funcClass members, I believe it is possible
+	//all variables not assigned to a member could be static
+	//wrong all instances have thier own copy whether they are local or not.
+	
+	
+	function writeWholeCustomer(){
+		window.alert(memberCustNum+" "+memberCustNam);
+	}
+	function writeError(){
+	
+		window.alert(someData);
+	}
+	
+	this.setLocalVar = function(data){
+		someData = data;
+	}
+	
+	//Add a publicly accessable function to run the internal ones
+	
+	this.funcRunPrivate = function(){
+		//writeWholeCustomer();
+		writeError();
+	}
+	
+}
+
+function classGlobalClassTest(){
+	var custObjGlob = new classCustomer("Global", "2010");
+	
+	this.runIt = function(){
+	custObjGlob.funcWriteName();
+	custObjGlob.funcWriteNumber();
+	}
+}
+
+function instantiationDemo(){
+
+	//This method shows how to instantiate a functionClass
+	//and use it.
+	var globClss = new classGlobalClassTest();
+	globClss.runIt();
+	
+	var custObj = new classCustomer("Shawn", "7152942182");
+	
+	custObj.setLocalVar("data One");
+	custObj.funcWriteName();
+	custObj.funcWriteNumber();
+	custObj.funcRunPrivate();
+	//custObj.writeError();
+	
+	/*
+	var custObj2 = new classCustomer("Diamond", "3202945760");
+	
+	custObj2.funcWriteName();
+	custObj2.funcWriteNumber();
+	custObj2.funcRunPrivate();
+	*/
+	var reader = new Base64Reader("0");
+	var inflator = new Inflator(reader);
+	var translator = new Utf8Translator(inflator);
+	
+	/*
+	custObj.funcWriteName();
+	custObj.funcWriteNumber();
+	custObj.funcRunPrivate();
+	*/
+	document.write(inflator.readByte());
+	/*document.write(reader.readByte());
+	document.write(reader.readByte());
+	document.write(reader.readByte());*/
+	
+	
+	
+	
+
+}
+
+/**********************************************
+Now it is time to test the jQuery Remote
+Ajax functions.
+***********************************************/
+function libLoad(){
+
+}
+
+function sendCmd(){
+//Test if any commands are still running
+/*
+var arrOpenCmd = document.getElementsByClassName('jst_openCmd');
+if(arrOpenCmd.length !> 0){
+	document.write('arr not greater than zero');
+}else{
+	//Please wait while your last cmd is completed
+	document.write('arr is greater than zero');
+}
+//create a command object
+*/
+}
+var loaded = false;
+function testObjScript(){
+this.scriptLoaded = function(){
+loaded = true;
+passedCall();
+
+window.alert('stuff');
+window.alert('<a href="javascript:alertMess();">GO</a>');
+alertMess();
+//passedCall();
+}
+}
+function fireCustomOnerror(){
+	if(loaded == true){window.alert('file loaded - it should have ran');}else{
+	window.alert('If the file hasn\'t loaded yet its not going to');}
+}
+var passedCall;
+var handlingObj = new testObjScript();
+
+function testJax(nam){
+passedCall = nam;
+ //window.alert(nam);
+//passedCall = cb;
+var headID = document.getElementById('hd');         
+var newScript = document.createElement('script');
+newScript.type = 'text/javascript';
+newScript.onload=handlingObj.scriptLoaded;
+newScript.src = 'last_try.js';
+
+headID.appendChild(newScript);
+setTimeout(fireCustomOnerror, 10000);
+//window.alert('did this wait');
+
+
+ /*$(document).ready(function() {
+   document.write('stuff');
+   document.write('<a href="javascript:alertMess();">GO</a>');
+  }
+*/
+//var IdsetTimeout1 = setTimeout(window.alert('this is cool'), 2);
+//clearTimeout(IdsetTimeout1);
+//while(loaded == false){
+//do nothing but wait
+//}
+//document.write('stuff');
+//document.write('<a href="javascript:alertMess();">GO</a>');
+//document.write(newScript.);
+/*
+var arrOpenCmd = document.getElementsByClassName('jst_openCmd');
+//document.write(arrOpenCmd.value+'stuff');	
+document.write('stuff');
+document.write('<a href="javascript:alertMess();">GO</a>');
+*/
+}
+var name = function(){
+window.alert('name ran');
+}
+//]]>
+-->
+</script>
+
+
+
+
+
+</head>
+
+<body onload="">
+
+			<div id="load-div" class="functions">
+				
+				<a href="javascript:testJax(name);">GO</a>
+				<!--<input type="submit" value="alertMess();" id="load_basic" />
+				<input type="submit" value="load() #DOM" id="load_dom" />
+				<input type="submit" value="load() GET" id="load_get" />
+				<input type="submit" value="load() POST" id="load_post" />
+				<input type="submit" value="load() callback" id="load_callback" />-->
+			</div>
+
+			<div id="result"  class="functions">
+				
+			</div>
+
+</body>
+</html>
+

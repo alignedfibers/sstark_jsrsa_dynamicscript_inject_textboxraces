@@ -1,0 +1,230 @@
+<html>
+<!-- The intent of this script is cto handle the addition of multiple document elements 
+where the element added is prototyped to: or by default: handles events such as a script 
+element with the onload/callback attribute set. Uses xss style injection and is documentation in code  
+regarding how I would like to manage source data, libraries, commands and applications. 
+Many notes have been removed. -->
+<head id="hd">		
+<script>		
+/********************************************************************
+If this.func is not used that means function or variable is private
+*********************************************************************/
+function transUnit(){
+	//console.log("Initializing transUnit");
+	var is_busy = false;   //May not be needed, used as a way to avoid any collisions in the make call function, 
+	/*after callback is assinged to onload in script element in document, script should be able to continue appending further scripts
+	you will see when this runs that the makecall method is called multiple times and continues to run independent of the callback assigned
+	to onload, unsure if there is a possible issue with multiple onloads using same callback, or if events stack and run in order
+	you must instantiate a new transUnit for each script request, because the object maintains the loaded state, in future will pass itself to
+	callback and be assigned as the manager for that script, hooking events and dependencies when the script loads renaming itself and
+	assigning itself to the correct global array, denoting type and scope such that shared resources can be accessed by namespace 
+	/top-level-name/name-local/other-local/shouldntB2deep resources are accessable anywhere down the chain, dependencies may be listed as multiple chains
+	wildcards for dependencies should be added at some point. These are wrapper objects and  should be capable of loading any further dependencies
+	requested by the script not already loaded - in the initial load the script receieved should define these but does not do the functionality. Should also check
+	out instances of anything that is needed by the script such as windowing kit so messages can be passed to the windowing manager
+	to allow windows to be moved to front of stack, we do not count all windows we simply send a unique id and window instance to manager to do 
+	an action on the specific window, where sizing, focus and display are applied to the window, it is double hooked so to make it possible to
+	introduce a new window to the manager instead of requesting a new window from the manager, manager should be able to understand what you
+	send it, nothing is strictly defined, not all windows need to look the same however some base functionality must be agreed to be handled by manager
+	such that all windows have certain properties and can supply change requests to manager that are not local to itself 
+	(screen position, size exc, how action icons and such are interfaced is up to the window itself, you request windows from your kit, to bind windows 
+	in panes or subwindow you must send the window instances to the manager, grids and such can be created... only applications get windows, 
+	cmds and libs do not, a console window is created for all apps though it may not always be visible, a main monitor console can also be turned on
+	as all events and command calls log to that buffer stating who when where exc. That buffer can be setup to send the data to elasticsearch, usable consoles
+	can be created in any app and have access to the commands, libs exc. defined by the chains that the app has hooked at some point app may need a token to
+	hook a lib*/
+	/***********************************************************************
+	//To find all current loaded URI's use document.getElementsByClassName(uri)
+	//Then itterate the array that is returned to check if already loaded.
+	//I hope I may be able to cache data that is retrieved then remove the element.
+	//This would only occur with data scripts. The bulk of requests should be in
+	//standard URL format with few action parameters.
+	************************************************************************/
+	var scriptNodeIds = new Array(); //An array of all loaded script node ids
+	var callback; //The function to be called after load
+	var loaded = false;  //Is current request finished loading?
+	var reqUri; //The uri of current request for identification purposes, (the src attribute of injected script element:2/15)
+	
+	function resetOncePerBasisVars(){
+	console.log("Resetting request variables for request");
+		is_busy = "";
+		callback = "";
+		reqUri = "";
+		
+	}
+	
+	function loadTimedOut(){
+		console.log("Entered timeout function : verifing script has loaded");
+		if(loaded == false){
+		console.log('script loaded flag equals false in timeout');
+			if(scriptNodeIds.length > 0){
+			console.log('script has been injected - nodes are greater than 0 '.scriptNodeIds.length);
+				var head = document.getElementById('hd');
+				var unloadScript = document.getElementById(scriptNodeIds[scriptNodeIds.length-1]);
+				console.log(unloadScript.src);
+				if('dontexist.js' == 'dontexist.js'){
+				console.log('script element without load auth is currently being unloaded');
+					head.removeChild(unloadScript);
+					is_busy = false;
+				}else{
+					console.log('Nothing was ever loaded in the first place');
+				}
+			}
+		}
+	}
+	
+	var loadFinished = function(){
+	console.log('in load finished function for: ');
+		loaded = true;
+		is_busy = false;
+		//callback(scriptInf);
+		//commander.resumeCmds(scriptInf);
+		console.log("should be leaving load1 now");
+	}
+	
+	var lastCreatedScriptNodeId = function(){
+	//Just returns the id of the last created script
+	//Also usefull for analytics and hacking my own code
+	return scriptNodeIds[scriptNodeIds.length-1];
+	}
+	
+	var lastLoadedDesc = function(){
+	//Just returns the last loaded scriptInf
+	//Usefull for analytics and hacking my own code
+	//will not cooperate with local as public so make 
+	//it local I geuss if needed it get it in callback
+	return loadedDescribers[loadedDescribers.length-1];
+	}
+	
+	
+	/******************************************************************
+	Below you will find what I believe is the only point specifically 
+	designated as an entry point. You may find that within my scripting 
+	techniques that a clear exit point may be hard to find. There is good
+	reason for this and to do what I am trying to do there is only a limited
+	number of ways it can be done. If you look closely the exit points are
+	specific calls to methods of other specifically purposed objects, that
+	can not request the neccasary information from this object directly.
+	It must be given to them, thus the use of multiple private methods and
+	calls to public members of global objects. Adding other objects/response 
+	formats may be difficult in this setup. I believe the objects and 
+	capabilities I provide are enouph to accomplish any task you would like 
+	under this scenerio. (2010)
+	*******************************************************************/
+	this.makeCall = function(ru, cb){
+	window.alert(ru);
+	var requestUri = ru;
+	console.log('in make call function for: ');
+		if(is_busy != true){
+		console.log('is_busy must equal false');
+			loaded = false;
+			is_busy = true;
+			reqUri = ru;
+			callback = cb;
+			console.log('before geting elements with same class name');
+			//The element tested for below should actually be reqUri
+			console.log(document.getElementsByClassName(ru).length);
+			
+			if(document.getElementsByClassName(ru).length == 0){
+				console.log('after test for elements of same class name');
+				var headID = document.getElementById('hd');         
+				var newScript = document.createElement('script');
+				newScript.type = 'text/javascript';
+				newScript.id = '2010';
+				newScript.className = ru;
+				newScript.onload=loadFinished; //This is a very important event*******
+				newScript.src = ru;
+				this.loadLastCreatedScriptId('2010');
+				console.log(lastCreatedScriptNodeId());
+				//Id gets set, Class gets set = jst_open, reqUrl
+				headID.appendChild(newScript);
+				//removes the just added element and creates a dummy scriptDesc
+				//then sends the error decription to the callback
+				setTimeout(loadTimedOut, 10000); //Also feature rich, sets function to run in T minus
+				console.log('I am about to return from makeCall');
+				return;
+			}else{
+			console.log('the requested already has a script element?');
+			}
+				
+		}else{
+			//cache request or send a status to the call back
+			//meaning callbacks will be required to handle a # of errors
+		}
+		
+	}
+	
+	this.loadDescription = function(desc){
+	// This method should only be called by incoming scripts
+	// However it is still open to circumvention and may prove
+	// to be a factor in a later security leak.
+	// I can't be certain that this method was successful one
+	// should be sure that what ever method calls it also checks
+	// that there is data and a well formed scriptInf object passed
+	// to it.
+	loadedDescribers.push(desc);
+	}
+	
+	this.loadLastCreatedScriptId = function(id){
+	
+		scriptNodeIds.push(id);
+	
+	}
+	
+	this.isBusy = function(){
+	    //best to just test status prior to making call
+		//then timeout and try again after adding load 
+		//animation and message. Whomever calls this should
+		//be considering a call to the makeCall method of this class
+		return is_busy;
+	}
+}
+transUnit.prototype.staticProperty = "baz";
+function libLoad(){
+
+}
+
+function sendCmd(){
+
+}
+
+var asyncBack = function(scriptInf){
+	console.log(scriptInf+'CALLBACK');
+}
+
+
+var transUn = new transUnit();
+var transUn2 = new transUnit();
+function outSide(){
+console.log("gotOutside");
+//alertMess();
+}
+function start(){
+console.log(transUn.staticProperty);
+console.log(transUn2.staticProperty);
+transUn.makeCall('last_try.js',asyncBack);
+transUn2.makeCall('last_try2.js',asyncBack);
+}
+
+</script>
+</head>
+<body>
+
+			<div id="load-div" class="functions">
+				
+				<a href="javascript:start();">GO</a>
+				<a href="javascript:alertMess();">GO Mess</a>
+				<a href="javascript:alertMess2();">GO Mess2</a>
+				<!--<input type="submit" value="alertMess();" id="load_basic" />
+				<input type="submit" value="load() #DOM" id="load_dom" />
+				<input type="submit" value="load() GET" id="load_get" />
+				<input type="submit" value="load() POST" id="load_post" />
+				<input type="Ftrim
+				mit" value="load() callback" id="load_callback" />-->
+			</div>
+
+			<div id="result"  class="functions">
+				
+			</div>
+</body>
+</html>
