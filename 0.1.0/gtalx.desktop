@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=gtalX
+Comment=Linux gtalk client
+Exec=gtalx
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/gtalx/icon_aboutdlg.png
+Categories=Application;Network;
+StartupNotify=true

@@ -1,0 +1,77 @@
+[AboutDlg]
+"Translated by"="Traduzido por: Felipe Augusto"
+
+"about"="sobre"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="O <i>%1</i> é um cliente Gtalk usando a biblioteca libjingle da Google."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Visite o sítio oficial!!!"
+"OK"="OK"
+"Theme created by: %1"="Tema criado por: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Conectando"
+"Logging in"="Conectando"
+"Logged in"="Conectado"
+"Incoming call"="Chamada Recebida"
+"Call finished"="Chamada Finalizada"
+"Calling"="Chamando"
+"Call answered"="Chamada Respondida"
+"Call rejected"="Chamada Rejeitada"
+"Call in progress"="Chamada em Progresso"
+"Other side hung up"="Outra linha desligou"
+
+#errors
+"Cannot find contact"="Contato não encontrado"
+"Incoming call should be accepted or rejected"="Chamada recebida deve ser aceita ou rejeitada"
+"During call only mute and unmute are allowed"="Durante a chamada somente mudo e fala são permitidos"
+"Invalid request"="Requisição inválida"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Senha"
+"Connect"="Conectar"
+
+[SettingsDlg]
+"settings"="Opções"
+"Selected language:"="Escolher Idioma:"
+"Selected theme:"="Escolher Tema:"
+"Selected smilies:"="Escolher Emotions:"
+"Save"="Salvar"
+"Cancel"="Cancelar"
+"Restore defaults"="Configuração Padrão"
+"Settings saved, please restart gtalX"="Opções salvas, por favor reinicie o gtalX"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - Cliente Gtalk para Linux"
+"Answer"="Responder"
+"Reject"="Rejeitar"
+"Hang up"="Desligar"
+"Call"="Chamar"
+"Send"="Enviar"
+"Incoming call from %1"="Chamada recebida de %1"
+"In call with %1"="Conversando com %1"
+"Warning"="Aviso"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Não pode chamar %1 porque ele usa um aplicativo que não suporta conversa de voz."
+"Calling %1"="Chamando %1"
+"%1 is offline, he might not have received your message."="%1 está desconectado, ele pode não receber sua mensagem."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Se você fechar essa conversa, sua sessão de conversa de voz será finalizada. Você deseja continuar?"
+
+[CallDlgManager]
+"%1 says: %2"="%1 disse: %2"
+"Incoming call from %1"="Chamada recebida de %1"
+
+[MainDlg]
+"Hello %1"="Olá %1"
+"About"="Sobre..."
+"Settings"="Opções"
+
+[ContactsWidget]
+"Contact"="Contactar"
+"offline"="Desconectado"
+"do not disturb"="não pertube"
+"idle"="descansando"
+"online"="disponível"
+"This list is empty because all your contacts are offline"="A lista está vazia porque todos seus contatos então desconectados"
+
+[TrayIcon]
+"&Quit"="&Sair"

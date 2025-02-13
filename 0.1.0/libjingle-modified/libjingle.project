@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="libjingle">
+  <VirtualDirectory Name="talk">
+    <VirtualDirectory Name="p2p">
+      <VirtualDirectory Name="base">
+        <File Name="talk/p2p/base/sessionmanager.h"/>
+        <File Name="talk/p2p/base/constants.h"/>
+        <File Name="talk/p2p/base/p2ptransport.cc"/>
+        <File Name="talk/p2p/base/udpport.cc"/>
+        <File Name="talk/p2p/base/relayserver.cc"/>
+        <File Name="talk/p2p/base/transportchannel.cc"/>
+        <File Name="talk/p2p/base/sessionclient.h"/>
+        <File Name="talk/p2p/base/port_unittest.cc"/>
+        <File Name="talk/p2p/base/tcpport.cc"/>
+        <File Name="talk/p2p/base/candidate.h"/>
+        <File Name="talk/p2p/base/port.h"/>
+        <File Name="talk/p2p/base/stunport.cc"/>
+        <File Name="talk/p2p/base/rawtransportchannel.h"/>
+        <File Name="talk/p2p/base/portallocator.h"/>
+        <File Name="talk/p2p/base/transportchannelimpl.h"/>
+        <File Name="talk/p2p/base/pseudotcp.h"/>
+        <File Name="talk/p2p/base/relayserver_main.cc"/>
+        <File Name="talk/p2p/base/p2ptransportchannel.h"/>
+        <File Name="talk/p2p/base/sessionid.h"/>
+        <File Name="talk/p2p/base/tcpport.h"/>
+        <File Name="talk/p2p/base/relayport.cc"/>
+        <File Name="talk/p2p/base/port.cc"/>
+        <File Name="talk/p2p/base/stunserver.cc"/>
+        <File Name="talk/p2p/base/constants.cc"/>
+        <File Name="talk/p2p/base/session.h"/>
+        <File Name="talk/p2p/base/transport.cc"/>
+        <File Name="talk/p2p/base/common.h"/>
+        <File Name="talk/p2p/base/relayserver.h"/>
+        <File Name="talk/p2p/base/transportchannelproxy.cc"/>
+        <File Name="talk/p2p/base/rawtransport.cc"/>
+        <File Name="talk/p2p/base/session_unittest.cc"/>
+        <File Name="talk/p2p/base/udpport.h"/>
+        <File Name="talk/p2p/base/session.cc"/>
+        <File Name="talk/p2p/base/stunserver.h"/>
+        <File Name="talk/p2p/base/pseudotcp.cc"/>
+        <File Name="talk/p2p/base/rawtransportchannel.cc"/>
+        <File Name="talk/p2p/base/relayport.h"/>
+        <File Name="talk/p2p/base/transport.h"/>
+        <File Name="talk/p2p/base/stunrequest.h"/>
+        <File Name="talk/p2p/base/stun.h"/>
+        <File Name="talk/p2p/base/rawtransport.h"/>
+        <File Name="talk/p2p/base/stunserver_unittest.cc"/>
+        <File Name="talk/p2p/base/stunrequest.cc"/>
+        <File Name="talk/p2p/base/sessionmanager.cc"/>
+        <File Name="talk/p2p/base/p2ptransport.h"/>
+        <File Name="talk/p2p/base/p2ptransportchannel.cc"/>
+        <File Name="talk/p2p/base/stunport.h"/>
+        <File Name="talk/p2p/base/stun.cc"/>
+        <File Name="talk/p2p/base/stunserver_main.cc"/>
+        <File Name="talk/p2p/base/transportchannel.h"/>
+        <File Name="talk/p2p/base/sessiondescription.h"/>
+        <File Name="talk/p2p/base/transportchannelproxy.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="client">
+        <File Name="talk/p2p/client/socketmonitor.h"/>
+        <File Name="talk/p2p/client/sessionsendtask.h"/>
+        <File Name="talk/p2p/client/basicportallocator.cc"/>
+        <File Name="talk/p2p/client/basicportallocator.h"/>
+        <File Name="talk/p2p/client/sessionmanagertask.h"/>
+        <File Name="talk/p2p/client/socketmonitor.cc"/>
+        <File Name="talk/p2p/client/httpportallocator.h"/>
+        <File Name="talk/p2p/client/httpportallocator.cc"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="examples">
+      <VirtualDirectory Name="call">
+        <File Name="talk/examples/call/callclient.cc"/>
+        <File Name="talk/examples/call/call_main.cc"/>
+        <File Name="talk/examples/call/console.cc"/>
+        <File Name="talk/examples/call/console.h"/>
+        <File Name="talk/examples/call/callclient.h"/>
+        <File Name="talk/examples/call/Makefile.am"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="pcp">
+        <File Name="talk/examples/pcp/pcp_main.cc"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="session">
+      <VirtualDirectory Name="tunnel">
+        <File Name="talk/session/tunnel/pseudotcpchannel.cc"/>
+        <File Name="talk/session/tunnel/tunnelsessionclient.cc"/>
+        <File Name="talk/session/tunnel/tunnelsessionclient.h"/>
+        <File Name="talk/session/tunnel/pseudotcpchannel.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="phone">
+        <File Name="talk/session/phone/mediachannel.h"/>
+        <File Name="talk/session/phone/gipslitemediaengine.cc"/>
+        <File Name="talk/session/phone/voicechannel.h"/>
+        <File Name="talk/session/phone/mediaengine.h"/>
+        <File Name="talk/session/phone/voicechannel.cc"/>
+        <File Name="talk/session/phone/gipslitemediaengine.h"/>
+        <File Name="talk/session/phone/linphonemediaengine.cc"/>
+        <File Name="talk/session/phone/phonesessionclient.h"/>
+        <File Name="talk/session/phone/call.h"/>
+        <File Name="talk/session/phone/audiomonitor.cc"/>
+        <File Name="talk/session/phone/call.cc"/>
+        <File Name="talk/session/phone/channelmanager.cc"/>
+        <File Name="talk/session/phone/codec.h"/>
+        <File Name="talk/session/phone/phonesessionclient.cc"/>
+        <File Name="talk/session/phone/linphonemediaengine.h"/>
+        <File Name="talk/session/phone/channelmanager.h"/>
+        <File Name="talk/session/phone/audiomonitor.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="fileshare">
+        <File Name="talk/session/fileshare/fileshare.cc"/>
+        <File Name="talk/session/fileshare/fileshare.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="xmllite">
+      <File Name="talk/xmllite/xmlconstants.h"/>
+      <File Name="talk/xmllite/xmlelement.cc"/>
+      <File Name="talk/xmllite/xmlnsstack.h"/>
+      <File Name="talk/xmllite/xmlbuilder.h"/>
+      <File Name="talk/xmllite/xmlbuilder.cc"/>
+      <File Name="talk/xmllite/xmlparser.h"/>
+      <File Name="talk/xmllite/xmlelement.h"/>
+      <File Name="talk/xmllite/qname.cc"/>
+      <File Name="talk/xmllite/xmlparser.cc"/>
+      <File Name="talk/xmllite/qname.h"/>
+      <File Name="talk/xmllite/xmlnsstack.cc"/>
+      <File Name="talk/xmllite/xmlprinter.cc"/>
+      <File Name="talk/xmllite/xmlprinter.h"/>
+      <File Name="talk/xmllite/xmlconstants.cc"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="base">
+      <File Name="talk/base/asyncsocket.h"/>
+      <File Name="talk/base/pathutils.h"/>
+      <File Name="talk/base/httpserver.cc"/>
+      <File Name="talk/base/openssladapter.cc"/>
+      <File Name="talk/base/win32socketserver.cc"/>
+      <File Name="talk/base/tarstream.cc"/>
+      <File Name="talk/base/bytebuffer.cc"/>
+      <File Name="talk/base/natsocketfactory.h"/>
+      <File Name="talk/base/win32filesystem.cc"/>
+      <File Name="talk/base/Equifax_Secure_Global_eBusiness_CA-1.h"/>
+      <File Name="talk/base/signalthread.cc"/>
+      <File Name="talk/base/testclient.cc"/>
+      <File Name="talk/base/natsocketfactory.cc"/>
+      <File Name="talk/base/physicalsocketserver.h"/>
+      <File Name="talk/base/helpers.cc"/>
+      <File Name="talk/base/httpcommon.cc"/>
+      <File Name="talk/base/winping.h"/>
+      <File Name="talk/base/stream.cc"/>
+      <File Name="talk/base/httpbase.h"/>
+      <File Name="talk/base/logging.h"/>
+      <File Name="talk/base/win32.h"/>
+      <File Name="talk/base/nattypes.cc"/>
+      <File Name="talk/base/asynctcpsocket.cc"/>
+      <File Name="talk/base/basicdefs.h"/>
+      <File Name="talk/base/httpclient.h"/>
+      <File Name="talk/base/winfirewall.h"/>
+      <File Name="talk/base/stringdigest.cc"/>
+      <File Name="talk/base/virtualsocketserver.cc"/>
+      <File Name="talk/base/httpcommon.h"/>
+      <File Name="talk/base/streamutils.cc"/>
+      <File Name="talk/base/schanneladapter.h"/>
+      <File Name="talk/base/asyncpacketsocket.h"/>
+      <File Name="talk/base/socketaddress.cc"/>
+      <File Name="talk/base/win32window.h"/>
+      <File Name="talk/base/socketpool.cc"/>
+      <File Name="talk/base/time.cc"/>
+      <File Name="talk/base/pathutils.cc"/>
+      <File Name="talk/base/base64.h"/>
+      <File Name="talk/base/time.h"/>
+      <File Name="talk/base/socketstream.h"/>
+      <File Name="talk/base/taskrunner.cc"/>
+      <File Name="talk/base/openssladapter.h"/>
+      <File Name="talk/base/base64.cc"/>
+      <File Name="talk/base/host.h"/>
+      <File Name="talk/base/task.cc"/>
+      <File Name="talk/base/socketpool.h"/>
+      <File Name="talk/base/asyncpacketsocket.cc"/>
+      <File Name="talk/base/socket.h"/>
+      <File Name="talk/base/diskcache.h"/>
+      <File Name="talk/base/task.h"/>
+      <File Name="talk/base/network.h"/>
+      <File Name="talk/base/asyncudpsocket.h"/>
+      <File Name="talk/base/urlencode.cc"/>
+      <File Name="talk/base/logging.cc"/>
+      <File Name="talk/base/stringdigest.h"/>
+      <File Name="talk/base/diskcachestd.cc"/>
+      <File Name="talk/base/proxydetect.h"/>
+      <File Name="talk/base/proxyinfo.cc"/>
+      <File Name="talk/base/diskcache.cc"/>
+      <File Name="talk/base/stringutils.cc"/>
+      <File Name="talk/base/unixfilesystem.h"/>
+      <File Name="talk/base/diskcachestd.h"/>
+      <File Name="talk/base/diskcache_win32.cc"/>
+      <File Name="talk/base/helpers.h"/>
+      <File Name="talk/base/tarstream.h"/>
+      <File Name="talk/base/proxyinfo.h"/>
+      <File Name="talk/base/socketaddress.h"/>
+      <File Name="talk/base/md5c.c"/>
+      <File Name="talk/base/virtualsocket_unittest.cc"/>
+      <File Name="talk/base/fileutils.h"/>
+      <File Name="talk/base/virtualsocketserver.h"/>
+      <File Name="talk/base/sigslot.h"/>
+      <File Name="talk/base/signalthread.h"/>
+      <File Name="talk/base/common.h"/>
+      <File Name="talk/base/fileutils.cc"/>
+      <File Name="talk/base/ssladapter.h"/>
+      <File Name="talk/base/urlencode.h"/>
+      <File Name="talk/base/host.cc"/>
+      <File Name="talk/base/cryptstring.h"/>
+      <File Name="talk/base/md5.h"/>
+      <File Name="talk/base/network.cc"/>
+      <File Name="talk/base/diskcache_win32.h"/>
+      <File Name="talk/base/win32filesystem.h"/>
+      <File Name="talk/base/testclient.h"/>
+      <File Name="talk/base/asyncfile.h"/>
+      <File Name="talk/base/proxydetect.cc"/>
+      <File Name="talk/base/natserver.cc"/>
+      <File Name="talk/base/socketserver.h"/>
+      <File Name="talk/base/basictypes.h"/>
+      <File Name="talk/base/asynchttprequest.h"/>
+      <File Name="talk/base/socketaddresspair.cc"/>
+      <File Name="talk/base/win32socketserver.h"/>
+      <File Name="talk/base/scoped_ptr.h"/>
+      <File Name="talk/base/httpclient.cc"/>
+      <File Name="talk/base/common.cc"/>
+      <File Name="talk/base/streamutils.h"/>
+      <File Name="talk/base/natserver.h"/>
+      <File Name="talk/base/socketaddresspair.h"/>
+      <File Name="talk/base/physicalsocketserver.cc"/>
+      <File Name="talk/base/messagequeue.cc"/>
+      <File Name="talk/base/stringencode.h"/>
+      <File Name="talk/base/firewallsocketserver.cc"/>
+      <File Name="talk/base/sec_buffer.h"/>
+      <File Name="talk/base/asynchttprequest.cc"/>
+      <File Name="talk/base/httpserver.h"/>
+      <File Name="talk/base/stringencode.cc"/>
+      <File Name="talk/base/taskrunner.h"/>
+      <File Name="talk/base/stringutils.h"/>
+      <File Name="talk/base/socketadapters.h"/>
+      <File Name="talk/base/socketfactory.h"/>
+      <File Name="talk/base/linked_ptr.h"/>
+      <File Name="talk/base/winping.cc"/>
+      <File Name="talk/base/autodetectproxy.cc"/>
+      <File Name="talk/base/stream.h"/>
+      <File Name="talk/base/socketadapters.cc"/>
+      <File Name="talk/base/byteorder.h"/>
+      <File Name="talk/base/stl_decl.h"/>
+      <File Name="talk/base/thread.h"/>
+      <File Name="talk/base/natserver_main.cc"/>
+      <File Name="talk/base/firewallsocketserver.h"/>
+      <File Name="talk/base/ssladapter.cc"/>
+      <File Name="talk/base/schanneladapter.cc"/>
+      <File Name="talk/base/criticalsection.h"/>
+      <File Name="talk/base/asyncudpsocket.cc"/>
+      <File Name="talk/base/autodetectproxy.h"/>
+      <File Name="talk/base/httpcommon-inl.h"/>
+      <File Name="talk/base/asynctcpsocket.h"/>
+      <File Name="talk/base/convert.h"/>
+      <File Name="talk/base/event.h"/>
+      <File Name="talk/base/winfirewall.cc"/>
+      <File Name="talk/base/messagequeue.h"/>
+      <File Name="talk/base/nattypes.h"/>
+      <File Name="talk/base/thread.cc"/>
+      <File Name="talk/base/httpbase.cc"/>
+      <File Name="talk/base/nat_unittest.cc"/>
+      <File Name="talk/base/bytebuffer.h"/>
+      <File Name="talk/base/unixfilesystem.cc"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="chat">
+      <File Name="talk/chat/chattask.h"/>
+      <File Name="talk/chat/chattask.cc"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="xmpp">
+      <File Name="talk/xmpp/asyncsocket.h"/>
+      <File Name="talk/xmpp/xmppengineimpl.cc"/>
+      <File Name="talk/xmpp/ratelimitmanager.h"/>
+      <File Name="talk/xmpp/saslhandler.h"/>
+      <File Name="talk/xmpp/constants.h"/>
+      <File Name="talk/xmpp/xmppstanzaparser.cc"/>
+      <File Name="talk/xmpp/jid.cc"/>
+      <File Name="talk/xmpp/saslmechanism.h"/>
+      <File Name="talk/xmpp/xmpptask.h"/>
+      <File Name="talk/xmpp/ratelimitmanager.cc"/>
+      <File Name="talk/xmpp/xmpplogintask.cc"/>
+      <File Name="talk/xmpp/xmppclient.h"/>
+      <File Name="talk/xmpp/constants.cc"/>
+      <File Name="talk/xmpp/jid.h"/>
+      <File Name="talk/xmpp/saslplainmechanism.h"/>
+      <File Name="talk/xmpp/xmppstanzaparser.h"/>
+      <File Name="talk/xmpp/prexmppauth.h"/>
+      <File Name="talk/xmpp/saslmechanism.cc"/>
+      <File Name="talk/xmpp/xmppengineimpl.h"/>
+      <File Name="talk/xmpp/xmppengine.h"/>
+      <File Name="talk/xmpp/xmpplogintask.h"/>
+      <File Name="talk/xmpp/xmppengineimpl_iq.cc"/>
+      <File Name="talk/xmpp/xmpptask.cc"/>
+      <File Name="talk/xmpp/plainsaslhandler.h"/>
+      <File Name="talk/xmpp/xmppclient.cc"/>
+      <File Name="talk/xmpp/saslcookiemechanism.h"/>
+      <File Name="talk/xmpp/xmppclientsettings.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="login">
+      <File Name="talk/login/jingleinfotask.h"/>
+      <File Name="talk/login/xmpppump.h"/>
+      <File Name="talk/login/xmppauth.h"/>
+      <File Name="talk/login/presencepushtask.cc"/>
+      <File Name="talk/login/presencepushtask.h"/>
+      <File Name="talk/login/jingleinfotask.cc"/>
+      <File Name="talk/login/login_main.cc"/>
+      <File Name="talk/login/status.h"/>
+      <File Name="talk/login/xmppthread.h"/>
+      <File Name="talk/login/xmppsocket.cc"/>
+      <File Name="talk/login/xmppthread.cc"/>
+      <File Name="talk/login/xmppauth.cc"/>
+      <File Name="talk/login/xmpppump.cc"/>
+      <File Name="talk/login/xmppsocket.h"/>
+      <File Name="talk/login/presenceouttask.cc"/>
+      <File Name="talk/login/presenceouttask.h"/>
+      <File Name="talk/login/rostertask.h"/>
+      <File Name="talk/login/rostertask.cc"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src"/>
+  <VirtualDirectory Name="include"/>
+  <VirtualDirectory Name="libjingle-modified">
+    <File Name="config.h"/>
+  </VirtualDirectory>
+  <Settings Type="Static Library">
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library">
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="./Debug" Command="" CommandArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="-g">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Required="no" Options=""/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort=""/>
+      <ResourceCompiler Required="no" Options=""/>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <CleanCommand>make clean</CleanCommand>
+        <BuildCommand>make</BuildCommand>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(WorkspacePath)/libjingle-modified</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="">
+      <General OutputFile="$(IntermediateDirectory)/lib$(ProjectName).a" IntermediateDirectory="./Release" Command="" CommandArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Required="no" Options=""/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort=""/>
+      <ResourceCompiler Required="no" Options=""/>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <CleanCommand/>
+        <BuildCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+  <Dependencies Name="Release"/>
+  <VirtualDirectory Name="interface">
+    <File Name="interface/callclient.cpp"/>
+    <File Name="interface/jinglewrapper.cpp"/>
+    <File Name="interface/jinglewrapper.h"/>
+    <File Name="interface/libjingleif.h"/>
+    <File Name="interface/callclient.h"/>
+    <File Name="interface/Makefile.am"/>
+    <File Name="interface/fileclient.cpp"/>
+    <File Name="interface/fileclient.h"/>
+    <File Name="interface/errorhandler.cpp"/>
+    <File Name="interface/errorhandler.h"/>
+    <File Name="interface/contactsmanager.cpp"/>
+    <File Name="interface/contactsmanager.h"/>
+    <File Name="interface/globalsettings.cpp"/>
+    <File Name="interface/globalsettings.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug">
+    <Project Name="gtalx.codelite"/>
+  </Dependencies>
+</CodeLite_Project>

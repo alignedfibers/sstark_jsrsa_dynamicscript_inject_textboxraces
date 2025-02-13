@@ -1,0 +1,9 @@
+DlgCall { background-color: white }
+QTextEdit#m_ebShowChat { background-color: PapayaWhip }
+QLabel#m_lbInfo { color: red }
+QPushButton#m_btAnswer { background-color: #008000 }
+QPushButton#m_btReject { background-color: red }
+QPushButton#m_btHangUp { background-color: red }
+QPushButton#m_btCall { background-color: #008000 }
+QPushButton#m_btSendChat { background-color: blue; color: yellow }
+QPushButton#m_btSendFile  { background-color: yellow }

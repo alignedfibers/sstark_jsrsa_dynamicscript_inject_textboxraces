@@ -1,0 +1,6 @@
+# theme file for the connect dlg
+
+QDialog { background-color: white }
+QLineEdit#m_ebEmail { background-color: yellow; border: 1px solid #0077AA; border-radius: 4px; }
+QLineEdit#m_ebPassword { background-color: white; border: 1px solid #0077AA; border-radius: 4px; }
+QPushButton#m_btConnect { background-color: blue }

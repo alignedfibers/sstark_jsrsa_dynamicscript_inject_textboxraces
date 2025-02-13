@@ -1,0 +1,103 @@
+[AboutDlg]
+# This is the text that will appear in the About dialog, translate it and include your own name in your translation instead of Békés József.
+# If you "do not want to get famous" just delete this line.
+"Translated by"="Fordította: Békés Erika & József"
+
+"about"="névjegy"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="A <i>%1</i> egy Gtalk kliens ami a Google libjingle szoftverére épül."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Nézd meg a %1weboldalunkat%2!!!"
+"OK"="OK"
+"Theme created by: %1"="A motívumot készítette: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Csatlakozunk"
+"Logging in"="Belogolunk"
+"Logged in"="Belogoltunk"
+"Logged out"="Kilogoltunk"
+"Incoming call"="Bejövő hívás"
+"Call finished"="Hívás befejezve"
+"Calling"="Kicseng"
+"Call answered"="A másik fél felvette"
+"Call rejected"="A másik fél nem válaszol"
+"Call in progress"="Beszélgetés folyamatban"
+"Other side hung up"="A másik fél letette"
+"Wrong username or password"="Rossz email vagy jelszó"
+"Call not answered"="A masik fél nem vette fel"
+
+#errors
+"Cannot find contact"="Belső hiba"
+"Incoming call should be accepted or rejected"="Belső hiba"
+"During call only mute and unmute are allowed"="Belső hiba"
+"Invalid request"="Belső hiba"
+"Cannot start file transfer if already sending or receiving"="Nem lehet file-t küldeni, ha épp egy másikat küldünk vagy fogadunk"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Jelszó"
+"Connect"="Csatlakozás"
+"Error"="Hiba"
+
+[SettingsDlg]
+"settings"="beállítások"
+"Selected language:"="Kiválasztott nyelv:"
+"Selected theme:"="Kiválasztott motívum:"
+"Selected smilies:"="Kiválasztott hangulatjelek:"
+"Save"="Mentés"
+"Cancel"="Mégse"
+"Restore defaults"="Alapértelmezett értékek"
+"Settings saved, please restart gtalX"="A beállítások el lettek mentve, indítsd újra a progit"
+"Close to system tray"="Bezárás helyett minimalizálj a tálcára"
+"Display contact names instead of emails"="Mutasd az ismerősök nevét az email cím helyett"
+"Microphone sound card:"="Mikrofon hangkártya:"
+"Speaker sound card:"="Hangszóró hangkártya:"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - a linuxos Gtalk"
+"Answer"="Felvesz"
+"Reject"="Visszautasít"
+"Hang up"="Letesz"
+"Call"="Felhív"
+"Send"="Elküld"
+"Incoming call from %1"="%1 hív"
+"In call with %1"="Beszélgetés %1-mal folyamatban"
+"Warning"="Figyelmeztetés"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Nem lehet felhívni %1-ot, mert olyan alkalmazást használ, ami nem alkalmas beszélgetésre."
+"Calling %1"="%1-nál kicseng"
+"%1 is offline, he might not have received your message."="%1 ki van kapcsolva, lehet, hogy nem kapta meg az üzenetedet."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Megszakad a beszélgetés ha ezt az ablakot bezárod. Biztos, hogy be akarod zárni?"
+"Send file"="Fájl küldése"
+"Cancel"="Mégse"
+"Calling %1"="%1-t hívjuk"
+"%1 wants to send you a file.%4Description: %2 Size: %3.%4Do you want to accept the incoming file?"="%1 szeretne neked egy fájlt küldeni.%4Fájlnév: %2 %4Méret: %3 %4Elfogadod a bejövő fájlt?"
+# The next line is the dialog title when the file is offered by the other party and the dialog is shown to the user to select destination.
+"File offered"="Bejövő fájl"
+"Please select the destination directory"="Válaszd ki hova mentsük el a beérkező fájlt"
+"File(s) have been saved here: %1"="A beérkező fájl ide lett elmentve: %1"
+"Please select the file or directory that you want to send"="Válaszd ki a fájlt amit küldeni szeretnél"
+"Waiting for the other party to accept"="Most várunk a másik félre, hogy elfogadja-e a küldött fájlt"
+"File transfer has been cancelled"="A fájl küldése megszakadt"
+"File transfer cancelled"="Megszakadt fájlküldés"
+"Sending the file has finished."="A fájlt sikeresen elküldtük."
+"You cannot send files to %1 because he uses a chat application that is not capable of receiving files."="Most nem küldhetsz fájlt %1-nak mert olyan alkalmazást használ, ami nem alkalmas fájlfogadásra."
+"File transfer is in progress. Only one file can be transfered at a time."="Egyszerre csak 1 fájlküldés vagy fogadás lehet folyamatban."
+
+[CallDlgManager]
+"%1 says: %2"="%1 üzeni: %2"
+"Incoming call from %1"="Bejövő hívás %1-tól"
+
+[MainDlg]
+"Hello %1"="Üdv %1"
+"About"="Névjegy"
+"Settings"="Beállítások"
+
+[ContactsWidget]
+"Contact"="Kapcsolódás"
+"offline"="ki vagyok kapcsolva"
+"do not disturb"="ne zavarj"
+"idle"="távol vagyok"
+"online"="itt vagyok"
+"This list is empty because all your contacts are offline"="Ez a lista azért üres, mert egyetlen ismerősöd sincs bejelentkezve"
+
+[TrayIcon]
+"&Quit"="&Bezár"

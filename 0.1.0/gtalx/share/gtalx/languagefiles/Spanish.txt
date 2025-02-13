@@ -1,0 +1,77 @@
+[AboutDlg]
+"Translated by"="Traducido por: Toni Colom (IntheDark)"
+
+"about"="sobre"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="A <i>%1</i> es un cliente Gtalk utilizando la librería libjingle de Google."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="¡¡¡Visita la %1página oficial%2!!!"
+"OK"="OK"
+"Theme created by: %1"="Tema creado por: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Conectando"
+"Logging in"="Identificándose"
+"Logged in"="Identificado"
+"Incoming call"="Llamada entrante"
+"Call finished"="Llamada finalizada"
+"Calling"="Llamando"
+"Call answered"="Llamada respondida"
+"Call rejected"="Llamada rechazada"
+"Call in progress"="Llamando"
+"Other side hung up"="El otro lado ha colgado"
+
+#errors
+"Cannot find contact"="No se ha encontrado al contacto"
+"Incoming call should be accepted or rejected"="Llamda entrante debería ser aceptada o rechazada"
+"During call only mute and unmute are allowed"="Durante la llamada solo silenciar y no-silenciar están permitidos"
+"Invalid request"="Petición inválida"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Password"
+"Connect"="Conectar"
+
+[SettingsDlg]
+"settings"="Opciones"
+"Selected language:"="Escoger idioma:"
+"Selected theme:"="Escoger tema:"
+"Selected smilies:"="Escoger emoticonos:"
+"Save"="Guardar"
+"Cancel"="Cancelar"
+"Restore defaults"="Reestablecer predeterminados"
+"Settings saved, please restart gtalX"="Opciones guardadas, por favor reiniciar gtalX"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - Cliente Gtalk para Linux"
+"Answer"="Contestar"
+"Reject"="Rechazar"
+"Hang up"="Colgar"
+"Call"="Llamar"
+"Send"="Enviar"
+"Incoming call from %1"="Llamada recibida de %1"
+"In call with %1"="Hablando con %1"
+"Warning"="Aviso"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="No puedes llamar a %1 porque utiliza una aplicación de chat incompatible con voz."
+"Calling %1"="Llamando %1"
+"%1 is offline, he might not have received your message."="%1 está fuera de linea, probablemente no ha recibido tu mensaje."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Si cierras esta ventana tu sesión de chat por voz finalizará. ¿Quieres continuar?"
+
+[CallDlgManager]
+"%1 says: %2"="%1 dice: %2"
+"Incoming call from %1"="Llamada recibida de %1"
+
+[MainDlg]
+"Hello %1"="Hola %1"
+"About"="Acerca de..."
+"Settings"="Opciones"
+
+[ContactsWidget]
+"Contact"="Contactar"
+"offline"="fuera de línea"
+"do not disturb"="no moleastar"
+"idle"="descansando"
+"online"="en línea"
+"This list is empty because all your contacts are offline"="Esta lista esta vacía porque todos tus contactos estan fuera de línea"
+
+[TrayIcon]
+"&Quit"="&Quitar"

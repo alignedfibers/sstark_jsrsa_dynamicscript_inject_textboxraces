@@ -1,0 +1,79 @@
+[AboutDlg]
+# This is the text that will appear in the About dialog, translate it and include your own name in your translation instead of Békés József.
+# If you "do not want to get famous" just delete this line.
+"Translated by"="Μετάφραση: Ilias Soumpasis"
+
+"about"="περί"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="Το <i>%1</i> είναι ένα πρόγραμμα για το Gtalk που χρησιμοποιεί τη βιβλιοθήκη του Google libjingle."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Επισκεφτείτε την %1ιστοσελίδα%2 του <i>gtalX</i>!!!"
+"OK"="Εντάξει"
+"Theme created by: %1"="Δημιουργήθηκε από: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Συνδέεται με server"
+"Logging in"="Συνδέεται"
+"Logged in"="Έγινε σύνδεση"
+"Incoming call"="Εισερχόμενη κλήση"
+"Call finished"="Η κλήση τερματίστηκε"
+"Calling"="Κλήση"
+"Call answered"="Η κλήση απαντήθηκε"
+"Call rejected"="Η κλήση απορρίφθηκε"
+"Call in progress"="Κλήση σε πρόοδο"
+"Other side hung up"="Η άλλη πλευρά έκλεισε"
+
+#errors
+"Cannot find contact"="Δεν μπορεί να βρεθεί η επαφή"
+"Incoming call should be accepted or rejected"="Η εισερχόμενη κλήση πρέπει να απαντηθεί ή να απορριφθεί"
+"During call only mute and unmute are allowed"="Κατά τη διάρκεια της κλήσης μόνο η σιώπηση και αποσιώπηση επιτρέπονται"
+"Invalid request"="Άκυρο αίτημα"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Κωδικός"
+"Connect"="Σύνδεση"
+
+[SettingsDlg]
+"settings"="Ρυθμίσεις"
+"Selected language:"="Επιλεγμένη γλώσσα:"
+"Selected theme:"="Επιλεγμένο θέμα:"
+"Selected smilies:"="Επιλεγμένα εικονίδια (smileys):"
+"Save"="Αποθήκευση"
+"Cancel"="Άκυρο"
+"Restore defaults"="Επαναφορά αρχικών ρυθμίσεων"
+"Settings saved, please restart gtalX"="Οι ρυθμίσεις αποθηκεύτηκαν, παρακαλώ επανεκκινήστε το gtalx"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - ένα πρόγραμμα Gtalk για Linux"
+"Answer"="Απάντηση"
+"Reject"="Απόρριψη"
+"Hang up"="Κλείσιμο"
+"Call"="Κλήση"
+"Send"="Αποστολή"
+"Incoming call from %1"="Εισερχόμενη κλήση από %1"
+"In call with %1"="Συνομιλία με %1"
+"Warning"="Προειδοποίηση"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Δεν μπορείτε να καλέσετε τον χρήστη %1γιατί χρησιμποπιεί μια εφαρμογή συνομιλίας που δεν υποστηρίζει φωνητική συνομιλία."
+"Calling %1"="Κλήση του χρήστη %1"
+"%1 is offline, he might not have received your message."="Ο χρήστης %1 είανι εκτός σύνδεσης, μπορεί να μην έχει λάβει τα μηνύματά σας."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Εάν κλείσετε αυτό το παράθυρο η συνομιλία σας θα τερματισθεί. Θέλετε να συνεχίσετε?"
+
+[CallDlgManager]
+"%1 says: %2"="Ο χρήστης %1 λέει: %2"
+"Incoming call from %1"="Εισερχόμενη κλήση από τον χρήστη %1"
+
+[MainDlg]
+"Hello %1"="Καλώς ήλθες %1"
+"About"="Περί"
+"Settings"="Ρυθμίσεις"
+
+[ContactsWidget]
+"Contact"="Επικοινωνία"
+"offline"="Εκτός σύνδεσης"
+"do not disturb"="Μην ενοχλείται"
+"idle"="Ανενεργός"
+"online"="Συνδεδεμένος"
+"This list is empty because all your contacts are offline"="Αυτή η λίστα είναι άδεια γιατί όλες οι επαφές σας είναι εκτός σύνδεσης"
+
+[TrayIcon]
+"&Quit"="&Αποσύνδεση"

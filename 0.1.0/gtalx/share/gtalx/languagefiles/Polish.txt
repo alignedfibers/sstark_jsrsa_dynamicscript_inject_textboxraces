@@ -1,0 +1,80 @@
+[AboutDlg]
+# This is the text that will appear in the About dialog, translate it and include your own name in your translation instead of Békés József.
+# If you "do not want to get famous" just delete this line.
+"Translated by"="Tłumaczenie: Bartosz Mikucewicz"
+
+"about"="O programie"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="<i>%1</i> jest klientem Gtalk'a używającym biblioteki Google libjingle."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Sprawdź %1stronę domową%2 <i>gtalX</i>!!!"
+"OK"="OK"
+"Theme created by: %1"="Motyw stworzony przez: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Łączę"
+"Logging in"="Logowanie"
+"Logged in"="Zalogowany"
+"Incoming call"="Rozmowa przychodząca"
+"Call finished"="Rozmowa zakończona"
+"Calling"="Dzwonię"
+"Call answered"="Rozmowa zaakceptowana"
+"Call rejected"="Rozmowa odrzucona"
+"Call in progress"="Rozmowa w toku"
+"Other side hung up"="Druga strona się rozłączyła"
+
+#errors
+"Cannot find contact"="Nie odnaleziono kontaktu"
+"Incoming call should be accepted or rejected"="Rozmowa przychodząca powinna zostać zaakceptowana lub odrzucona"
+"During call only mute and unmute are allowed"="Podczas rozmowy możliwe jest jedynie włączenie lub wyłączenie dźwięku"
+"Invalid request"="Nieprawidłowe żądanie"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Hasło"
+"Connect"="Połącz"
+
+[SettingsDlg]
+"settings"="ustawienia"
+"Selected language:"="Wybrany język:"
+"Selected theme:"="Wybrany motyw:"
+"Selected smilies:"="Wybrane emotikony:"
+"Save"="Zapisz"
+"Cancel"="Anuluj"
+"Restore defaults"="Przywróć domyślne"
+"Settings saved, please restart gtalX"="Ustawiena zapisane. Proszę ponownie uruchomić gtalx"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - klient Gtalk'a dla Linuksa"
+"Answer"="Odbierz"
+"Reject"="Odrzuć"
+"Hang up"="Rozłącz"
+"Call"="Zadzwoń"
+"Send file"="Wyślij plik"
+"Send"="Wyślij"
+"Incoming call from %1"="Rozmowa przychodząca od %1"
+"In call with %1"="Rozmowa z %1"
+"Warning"="Ostrzeżenie"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Nie możesz zadzwonić do %1, ponieważ używa aplikacji, która nie obsługuje połączeń głosowych."
+"Calling %1"="Dzwonię do %1"
+"%1 is offline, he might not have received your message."="%1 jest niedostepny/a. Wiadomość może zostać niedoręczona."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Zamknięcie tego okna spowoduje przerwanie rozmowy. Czy chcesz kontynuować?"
+
+[CallDlgManager]
+"%1 says: %2"="%1 napisał/a: %2"
+"Incoming call from %1"="Rozmowa przychodząca od %1"
+
+[MainDlg]
+"Hello %1"="Witaj %1"
+"About"="O programie"
+"Settings"="Ustawienia"
+
+[ContactsWidget]
+"Contact"="Kontakt"
+"offline"="niedostępny"
+"do not disturb"="nie przeszkadzać"
+"idle"="zajęty"
+"online"="dostępny"
+"This list is empty because all your contacts are offline"="Lista jest pusta, ponieważ wszystkie kontakty są niedostępne"
+
+[TrayIcon]
+"&Quit"="&Zakończ"

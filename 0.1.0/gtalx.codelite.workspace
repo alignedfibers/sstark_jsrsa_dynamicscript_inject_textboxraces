@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="gtalx.codelite" Database="./gtalx.codelite.tags">
+  <Project Name="gtalx.codelite" Path="gtalx/gtalx.codelite.project" Active="Yes"/>
+  <Project Name="libjingle" Path="libjingle-modified/libjingle.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="gtalx.codelite" ConfigName="Debug"/>
+      <Project Name="libjingle" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

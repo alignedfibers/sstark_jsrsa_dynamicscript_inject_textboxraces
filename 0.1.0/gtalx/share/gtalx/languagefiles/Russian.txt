@@ -1,0 +1,79 @@
+[AboutDlg]
+# This is the text that will appear in the About dialog, translate it and include your own name in your translation instead of Békés József.
+# If you "do not want to get famous" just delete this line.
+"Translated by"="Перевод: Раймонд Патюпин"
+
+"about"="О программе"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="<i>%1</i> - клиент, использующий библиотеки Google"
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Заходите на %1сайт%2 <i>gtalX</i>!!!"
+"OK"="OK"
+"Theme created by: %1"="Тема создана: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Подключение"
+"Logging in"="Производится подключение"
+"Logged in"="Подключен"
+"Incoming call"="Входящий вызов"
+"Call finished"="Вызов окончен"
+"Calling"="Звоним"
+"Call answered"="Вызов отвечен"
+"Call rejected"="Вызов отменен"
+"Call in progress"="Сейчас звоним"
+"Other side hung up"="Вызов завершен на другой стороне"
+
+#errors
+"Cannot find contact"="Не могу найти контакт"
+"Incoming call should be accepted or rejected"="Входящий вызов должен быть принят или отменен"
+"During call only mute and unmute are allowed"="В течение разговора можно выключить или включить микрофон"
+"Invalid request"="Неверный запрос"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Пароль"
+"Connect"="Подключить"
+
+[SettingsDlg]
+"settings"="Установки"
+"Selected language:"="Язык выбран:"
+"Selected theme:"="Тема выбрана:"
+"Selected smilies:"="Смайлики выбраны:"
+"Save"="Сохранить"
+"Cancel"="Отмена"
+"Restore defaults"="По умолчанию"
+"Settings saved, please restart gtalX"="Установки сохранены, пожалуйста перезапустите программу"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="gtalX - клиент Gtalk'а для Линукс"
+"Answer"="Ответить"
+"Reject"="Отказать"
+"Hang up"="Завершить"
+"Call"="Вызов"
+"Send"="Отправить"
+"Incoming call from %1"="Входящий вызов от %1"
+"In call with %1"="Разговариваем с %1"
+"Warning"="Внимание"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Вы не можете произвести вызов %1. Используется несовместимый голосовой клиент"
+"Calling %1"="Звоним %1"
+"%1 is offline, he might not have received your message."="%1 не в сети и может не получить ваше сообщение."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Если закроете это окно, то голосовой вызов будет окончен. Продолжить?"
+
+[CallDlgManager]
+"%1 says: %2"="%1 пришет: %2"
+"Incoming call from %1"="Входящий вызов от %1"
+
+[MainDlg]
+"Hello %1"="Приветствую %1"
+"About"="О программе"
+"Settings"="Установки"
+
+[ContactsWidget]
+"Contact"="чат"
+"offline"="не в сети"
+"do not disturb"="не беспокоить"
+"idle"="отошел"
+"online"="в сети"
+"This list is empty because all your contacts are offline"="Список пуст, потому что все контакты не в сети"
+
+[TrayIcon]
+"&Quit"="&Выход"

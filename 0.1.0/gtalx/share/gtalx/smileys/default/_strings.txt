@@ -1,0 +1,8 @@
+# example file
+# <filename>=<characters>
+# http://www.smileyarena.com/
+
+"heart.png"="<3"
+"heart.png"="(L)"
+"smile.png"=":-)"
+"smile.png"=":)"

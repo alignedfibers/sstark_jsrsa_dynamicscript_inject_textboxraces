@@ -1,0 +1,7 @@
+# theme file for the main dlg
+
+DlgMain { background-color: white }
+QLabel#m_StatusBar { background-color: lightgray; border: 1px solid #0077AA; border-radius: 4px; }
+QPushButton#btAbout { background-color: green }
+QPushButton#btSettings { background-color: orange }
+#QWidget#m_ContactsCtrl { border: 1px solid #0077AA; border-radius: 4px; }

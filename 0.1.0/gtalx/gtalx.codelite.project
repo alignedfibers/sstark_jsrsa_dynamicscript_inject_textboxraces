@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="gtalx.codelite">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="share">
+    <VirtualDirectory Name="gtalx">
+      <VirtualDirectory Name="smileys">
+        <VirtualDirectory Name="default">
+          <File Name="share/gtalx/smileys/default/_strings.txt"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="languagefiles">
+        <File Name="share/gtalx/languagefiles/hu_HU.txt"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="contactswidgetdata"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <VirtualDirectory Name="src">
+    <File Name="src/utils.h"/>
+    <File Name="src/dlgcall.h"/>
+    <File Name="src/translator.h"/>
+    <File Name="src/dlgmain.h"/>
+    <File Name="src/dlgmain.cpp"/>
+    <File Name="src/dlgcall.cpp"/>
+    <File Name="src/dlgconnect.h"/>
+    <File Name="src/dlgabout.cpp"/>
+    <File Name="src/jinglecallbackimpl.cpp"/>
+    <File Name="src/settingsmanager.h"/>
+    <File Name="src/main.h"/>
+    <File Name="src/settingsmanager.cpp"/>
+    <File Name="src/utils.cpp"/>
+    <File Name="src/translator.cpp"/>
+    <File Name="src/jinglecallbackimpl.h"/>
+    <File Name="src/dlgabout.h"/>
+    <File Name="src/main.cpp"/>
+    <File Name="src/dlgconnect.cpp"/>
+    <File Name="src/calldlgmanager.cpp"/>
+    <File Name="src/calldlgmanager.h"/>
+    <File Name="src/contactswidget.cpp"/>
+    <File Name="src/contactswidget.h"/>
+    <File Name="src/contactsmanager.cpp"/>
+    <File Name="src/contactsmanager.h"/>
+    <File Name="src/smileysmanager.cpp"/>
+    <File Name="src/smileysmanager.h"/>
+    <File Name="src/trayiconmanager.cpp"/>
+    <File Name="src/trayiconmanager.h"/>
+    <File Name="src/gtalx.pro"/>
+    <File Name="src/Makefile.am"/>
+    <File Name="src/themesmanager.cpp"/>
+    <File Name="src/themesmanager.h"/>
+    <File Name="src/dlgsettings.cpp"/>
+    <File Name="src/dlgsettings.h"/>
+  </VirtualDirectory>
+  <Dependencies>
+    <Project Name="libjingle.codelite"/>
+  </Dependencies>
+  <VirtualDirectory Name="autom4te.cache">
+    <File Name="autom4te.cache/requests"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="gtalx">
+    <File Name="ChangeLog"/>
+    <File Name="install-sh"/>
+    <File Name="AUTHORS"/>
+    <File Name="libtool"/>
+    <File Name="README"/>
+    <File Name="missing"/>
+    <File Name="configure"/>
+    <File Name="COPYING"/>
+    <File Name="INSTALL"/>
+    <File Name="depcomp"/>
+    <File Name="NEWS"/>
+    <File Name="Makefile"/>
+  </VirtualDirectory>
+  <Dependencies Name="Release">
+    <Project Name="libjingle.codelite"/>
+  </Dependencies>
+  <Dependencies Name="Debug">
+    <Project Name="libjingle"/>
+    <Project Name="libjingle.codelite"/>
+  </Dependencies>
+  <Settings Type="Executable">
+    <Configuration Name="Debug" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" Required="no" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="gtalxlib" CommandArguments="" WorkingDirectory="$(WorkspacePath)/builddir/src/" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="yes">
+        <RebuildCommand/>
+        <CleanCommand>make clean</CleanCommand>
+        <BuildCommand>make</BuildCommand>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory>$(WorkspacePath)/gtalx</WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" Required="yes" PreCompiledHeader="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+    </Configuration>
+    <GlobalSettings>
+      <Compiler Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+  </Settings>
+</CodeLite_Project>

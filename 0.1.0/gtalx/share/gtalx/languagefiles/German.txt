@@ -1,0 +1,76 @@
+[AboutDlg]
+"Translated by"="Übersetzt von: Martin Braun "
+
+"about"="Über gtalx"
+"<i>%1</i> is a Gtalk client using Google's libjingle library."="<i>%1</i> ist eine Gtalk Anwendung unter Verwendung der libjingle Programmbibliothek von Google."
+"Check out the %1homepage%2 of <i>gtalX</i>!!!"="Besuchen Sie die %1Offizielle Webseite%2 von <i>gtalX</i>!!!"
+"OK"="OK"
+"Theme created by: %1"="Oberflächendesign von: %1"
+
+[LibjingleIf]
+#statuses
+"Connecting"="Verbindungsaufbau"
+"Logging in"="Authentifizierung"
+"Logged in"="Verbunden"
+"Incoming call"="Eingehender Anruf"
+"Call finished"="Anruf beendet"
+"Calling"="Anruf"
+"Call answered"="Anruf angenommen"
+"Call rejected"="Anruf abgewiesen"
+"Call in progress"="laufender Anruf"
+"Other side hung up"="Die Gegenstelle beendete das Gespräch"
+
+#errors
+"Cannot find contact"="Kontakt nicht gefunden"
+"Incoming call should be accepted or rejected"="Der eingehende Anruf soll beantwortet oder abgelehnt werden."
+"During call only mute and unmute are allowed"="Während des Gesprächs ist nur das Stummschalten des Mikros möglich"
+"Invalid request"="Ungültiger Aufruf"
+
+[ConnectDlg]
+"Email"="Email"
+"Password"="Passwort"
+"Connect"="Verbinden"
+
+[SettingsDlg]
+"settings"="Einstellungen"
+"Selected language:"="Ausgewählte Sprache:"
+"Selected theme:"="Ausgewähltes Oberflächendesign:"
+"Selected smilies:"="Verwendete Smilies:"
+"Save"="Speichern"
+"Cancel"="Abbrechen"
+"Restore defaults"="Standardeinstellungen"
+"Settings saved, please restart gtalX"="Einstellungen gespeichert, bitte gtalX neustarten!"
+
+[CallDlg]
+"gtalX - Gtalk client for Linux"="Gtalx - Gtalk für Linux"
+"Answer"="Antworten"
+"Reject"="Abweisen"
+"Hang up"="Auflegen"
+"Call"="Anruf"
+"Send"="Senden"
+"Incoming call from %1"="Eingehender Anruf von %1"
+"In call with %1"="Gespräch aktiv mit %1"
+"Warning"="Warnung"
+"You cannot call %1 because he uses a chat application that is not capable of voice chat."="Sie können nicht  %1 anrufen, da dessen Programm keine Sprachtelefonie unterstützt."
+"%1 is offline, he might not have received your message."="%1 ist nicht angemeldet, er hat Ihre Nachricht wohl nicht empfangen."
+"If you close this dialog your voice-chat session will finish. Do you want to continue?"="Wenn Sie dieses Fenster schliessen, wird Ihr Anruf beendet."
+
+[CallDlgManager]
+"%1 says: %2"="%1 sagt: %2"
+"Incoming call from %1"="Eingehender Anruf von %1"
+
+[MainDlg]
+"Hello %1"="Willkommen %1"
+"About"="Über ..."
+"Settings"="Einstellungen"
+
+[ContactsWidget]
+"Contact"="Kontakt"
+"offline"="nicht angemeldet"
+"do not disturb"="Bitte nicht stören!"
+"idle"="Abwesend"
+"online"="Angemeldet"
+"This list is empty because all your contacts are offline"="Diese Liste ist leer, weil keiner Ihrer Kontakte gerade bei GTalk angemeldet ist."
+
+[TrayIcon]
+"&Quit"="&Beenden"
